@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => 'textbook-exchange',    // The client ID assigned to you by the provider
     'clientSecret'            => 'aWiq9fMQFXxNfz%yjj26ibn4S6NekKxf24*Ekpk#5CEmAUg+jz',   // The client password assigned to you by the provider
-    'redirectUri'             => 'http://localhost/textbook/Static_Full_Version/oauth.php',
+    'redirectUri'             => 'http://swiftbookexchange.com/static_full_version/oauth.php',
     'urlAuthorize'            => 'https://oauth.oit.duke.edu/oauth/authorize.php',
     'urlAccessToken'          => 'https://oauth.oit.duke.edu/oauth/token.php' ,
     'urlResourceOwnerDetails' => 'https://oauth.oit.duke.edu/oauth/resource.php'

@@ -6,7 +6,7 @@ echo '
                             <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                                 <i class="fa fa-reorder"></i>
                             </button>
-                            <a href="home.php" class="navbar-brand">Duke 
+                            <a href="home.php" class="navbar-brand">Swift 
                         <span class="smaller">EXCHANGE</span></a>
                         </div>
                         <div class="navbar-collapse collapse" id="navbar">

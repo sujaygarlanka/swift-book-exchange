@@ -1,4 +1,5 @@
 <?php
+
 include "./php/functions.php";
 session_start();
 if(!isset($_SESSION['username'])){
@@ -18,7 +19,7 @@ if (isset($_POST['name'])){
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Duke Exchange</title>
+        <title>Swift Exchange</title>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
@@ -31,6 +32,7 @@ if (isset($_POST['name'])){
     </head>
 
     <body class="top-navigation">
+        <?php include_once("./php/analyticstracking.php"); ?>
         <div id="update_info" class="modal fade" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -45,7 +47,7 @@ if (isset($_POST['name'])){
                                 </div>
                                 <div class="form-group">
                                     <label>Phone Number</label>
-                                    <input name='phone_num' type="text" class="form-control" data-mask="(999) 999-9999" placeholder="" value="<?php echo $user['phone_num']; ?>" >
+                                    <input name='phone_num' type="text" class="form-control" data-mask="(999) 999-9999" placeholder="" value="<?php echo $user['phone_num']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
@@ -75,7 +77,7 @@ if (isset($_POST['name'])){
             </div>
 -->
                     <div class="title">
-                        <h1>Welcome to Duke Book Exchange</h1>
+                        <h1>Welcome to Swift Book Exchange</h1>
                     </div>
                     <div class="wrapper wrapper-content animated fadeInRight expose">
                         <div class="row content">
@@ -195,6 +197,7 @@ if (isset($_POST['name'])){
 
         <script>
             $(document).ready(function () {
+
                 refresh = setInterval(function () {
                     refreshNotifications();
 
@@ -224,7 +227,6 @@ if (isset($_POST['name'])){
                             if (!data.error) { // this sort of json accessing data only works in ajax
                                 if (data.unread != 0) { // wont display notifications label if none exist
                                     $('#unreadNotifications').html(data.unread);
-                                    $('title').html('(' + data.unread + ') Duke Exchange');
                                     $('#notifications').html(data.notifications);
                                 } else {
                                     $('#unreadNotifications').html('');

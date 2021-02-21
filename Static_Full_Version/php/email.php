@@ -15,8 +15,8 @@ function sendFeedbackEmail($subject, $feedback){
     $mail->SMTPSecure = 'tls';                               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('dukeexchange@gmail.com', 'Duke Book Exchange');
-    $mail->addReplyTo('dukeexchange@gmail.com', 'Duke Book Exchange');
+    $mail->setFrom('dukeexchange@gmail.com', 'Swift Book Exchange');
+    $mail->addReplyTo('dukeexchange@gmail.com', 'Swift Book Exchange');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $user = getUser($_SESSION['username']);
@@ -43,8 +43,8 @@ function sendListEmail($isbn, $title, $publish_date, $authors, $course, $book_co
     $mail->SMTPSecure = 'tls';                               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('dukeexchange@gmail.com', 'Duke Book Exchange');
-    $mail->addReplyTo('dukeexchange@gmail.com', 'Duke Book Exchange');
+    $mail->setFrom('dukeexchange@gmail.com', 'Swift Book Exchange');
+    $mail->addReplyTo('dukeexchange@gmail.com', 'Swift Book Exchange');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->addAddress($user['email'], $user['name']);     // Add a recipient
@@ -107,7 +107,7 @@ function sendListEmail($isbn, $title, $publish_date, $authors, $course, $book_co
                             </tr>
                             <tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;">
                                 <td class="content-block" style="margin: 0;padding: 0 0 20px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;">
-                                    <a href="http://dukebookexchange.com/static_full_version/myAccount.php#listings" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Duke Book Exchange</a>
+                                    <a href="http://swiftbookexchange.com/static_full_version/myAccount.php#listings" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Swift Book Exchange</a>
                                 </td>
                             </tr>
                         </table>
@@ -159,8 +159,8 @@ function sendBoughtEmail($book){
     $mail->SMTPSecure = 'tls';                               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('dukeexchange@gmail.com', 'Duke Book Exchange');
-    $mail->addReplyTo('dukeexchange@gmail.com', 'Duke Book Exchange');
+    $mail->setFrom('dukeexchange@gmail.com', 'Swift Book Exchange');
+    $mail->addReplyTo('dukeexchange@gmail.com', 'Swift Book Exchange');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->addAddress($buyer['email'], $buyer['name']);     // Add a recipient
@@ -235,7 +235,7 @@ function sendBoughtEmail($book){
                             </tr>
                             <tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;">
                                 <td class="content-block" style="margin: 0;padding: 0 0 20px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;">
-                                    <a href="http://dukebookexchange.com/static_full_version/myAccount.php#purchase-history" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Duke Book Exchange</a>
+                                    <a href="http://swiftbookexchange.com/static_full_version/myAccount.php#purchase-history" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Swift Book Exchange</a>
                                 </td>
                             </tr>
                         </table>
@@ -287,8 +287,8 @@ function sendSoldEmail($book){
     $mail->SMTPSecure = 'tls';                               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('dukeexchange@gmail.com', 'Duke Book Exchange');
-    $mail->addReplyTo('dukeexchange@gmail.com', 'Duke Book Exchange');
+    $mail->setFrom('dukeexchange@gmail.com', 'Swift Book Exchange');
+    $mail->addReplyTo('dukeexchange@gmail.com', 'Swift Book Exchange');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->addAddress($seller['email'], $seller['name']);     // Add a recipient
@@ -363,7 +363,7 @@ function sendSoldEmail($book){
                             </tr>
                             <tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;">
                                 <td class="content-block" style="margin: 0;padding: 0 0 20px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;">
-                                    <a href="http://dukebookexchange.com/static_full_version/myAccount.php#sold" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Duke Book Exchange</a>
+                                    <a href="http://swiftbookexchange.com/static_full_version/myAccount.php#sold" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Swift Book Exchange</a>
                                 </td>
                             </tr>
                         </table>
@@ -414,8 +414,8 @@ function sendCancelEmail($book){
     $mail->SMTPSecure = 'tls';                               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('dukeexchange@gmail.com', 'Duke Book Exchange');
-    $mail->addReplyTo('dukeexchange@gmail.com', 'Duke Book Exchange');
+    $mail->setFrom('dukeexchange@gmail.com', 'Swift Book Exchange');
+    $mail->addReplyTo('dukeexchange@gmail.com', 'Swift Book Exchange');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->addAddress($seller['email'], $seller['name']);     // Add a recipient
@@ -490,7 +490,7 @@ function sendCancelEmail($book){
                             </tr>
                             <tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;">
                                 <td class="content-block" style="margin: 0;padding: 0 0 20px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;">
-                                    <a href="http://dukebookexchange.com/static_full_version/myAccount.php#sold" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Duke Book Exchange</a>
+                                    <a href="http://swiftbookexchange.com/static_full_version/myAccount.php#sold" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;box-sizing: border-box;font-size: 14px;color: #092460;text-decoration: underline;">View in Swift Book Exchange</a>
                                 </td>
                             </tr>
                         </table>

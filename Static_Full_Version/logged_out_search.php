@@ -20,7 +20,7 @@ else {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>
-            <?php echo $_POST['search'] ?> - Duke Exchange</title>
+            <?php echo $_POST['search'] ?> - Swift Exchange</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
@@ -31,6 +31,7 @@ else {
     </head>
 
     <body class='top-navigation'>
+        <?php include_once("./php/analyticstracking.php"); ?>
         <div id="wrapper">
             <div id="page-wrapper">
                 <?php include 'logged_out_navbar.php'; ?>

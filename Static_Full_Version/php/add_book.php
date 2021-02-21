@@ -26,7 +26,7 @@ if (isset($_POST['title']) && isset($_SESSION['username'])){
         $publish_date = -2147483645;
     }
     if (empty($_POST['coverURL'])){
-        $cover_url = 'http://www.clipartkid.com/images/815/blank-book-cover-clip-art-book-covers-szPmIv-clipart.png';
+        $cover_url = 'https://www.freeclipartnow.com/d/10995-1/book-blue.jpg';
     }
     
     addBook($username,$isbn,$title,$publish_date,$authors,$cover_url,$course_name,$course_number,$book_condition,$notes,$price);

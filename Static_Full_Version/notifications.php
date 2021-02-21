@@ -15,7 +15,7 @@ $user = getUser($_SESSION['username']);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Notifications | Duke Exchange</title>
+        <title>Notifications | Swift Exchange</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">

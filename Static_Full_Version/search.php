@@ -22,7 +22,7 @@ else {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>
-            <?php echo $_POST['search'] ?> - Duke Exchange</title>
+            <?php echo $_POST['search'] ?> - Swift Exchange</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
@@ -38,6 +38,7 @@ else {
     </head>
 
     <body class='top-navigation'>
+        <?php include_once("./php/analyticstracking.php"); ?>
         <div id="buyModal" class="modal inmodal fade" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
@@ -256,6 +257,7 @@ else {
                                 $('#display_books').html(data.books);
 
                             }
+                            
                         }
                     });
                 }

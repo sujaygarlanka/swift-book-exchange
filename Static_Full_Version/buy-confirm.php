@@ -18,7 +18,7 @@ else {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Confirmation | Duke Exchange</title>
+        <title>Confirmation | Swift Exchange</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -46,11 +46,12 @@ else {
                         <h3 style="font-weight: 400;">You have purchased a book! You can contact the seller, <?php echo $seller['name']; ?> at <?php echo $seller['phone_num']; ?> or <?php echo "<a href='mailto:{$seller['email']}'>{$seller['email']}</a>";?> to get the book or they will contact you.
                         <br/><br/>You can see the details of your purchase <a href="myAccount.php#purchase-history">here</a>.</h3>
                     </div>
+<!--
                     <div class="wrapper wrapper-content animated fadeInRight expose">
 
                         <div class="ibox">
                             <div class="ibox-content">
-                                <h3>Feedback</h3>
+                                <h2>Feedback</h2>
 
                                 <p class="small">
                                     Any feedback on bugs, additional features or any reactions would greatly help!
@@ -73,6 +74,7 @@ else {
                         </div>
 
                     </div>
+-->
 
                     
 

@@ -18,7 +18,7 @@ $account = accountOverview($_SESSION['username']);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>My Account | Duke Exchange</title>
+        <title>My Account | Swift Exchange</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -28,6 +28,8 @@ $account = accountOverview($_SESSION['username']);
         <link href="css/home.css" rel="stylesheet">
         <!-- Customizes Navbar Breakpoint-->
         <link href="css/navbar.css" rel="stylesheet">
+        <link href="css/plugins/bootstrapSocial/bootstrap-social.css" rel="stylesheet">
+
 
         <!-- FooTable -->
         <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
@@ -44,6 +46,35 @@ $account = accountOverview($_SESSION['username']);
     </head>
 
     <body class="top-navigation">
+        <div id="facebookShareModal" class="modal inmodal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Share on Facebook</h4>
+                    </div>
+                    <div class="modal-body">
+                        Copy the following text and paste it in the next step to share to Facebook.
+                        <br>
+                        <br>
+                        <b>Selling:</b> 
+                        <br>
+                        <?php
+                        for ($i=0; $i<count($currentListings); $i++){
+                            echo $currentListings[$i]['course_num'] . ' - ' . $currentListings[$i]['title'] . ' (' . $currentListings[$i]['authors'] . ')';
+                            echo '<br>';
+                        } 
+                        ?>
+                        
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                        <button id="shareBtn" type="button" class="btn btn-success buy-modal-button">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="removeListingModal" class="modal inmodal fade" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
@@ -160,10 +191,13 @@ $account = accountOverview($_SESSION['username']);
                             <div class="purchase col-lg-2"></div>
                             <div class="col-lg-12">
                                 <a class="col-lg-8 purchase" name="listings" href="#listings">
-                                    <div class="col-lg-8 purchase">CURRENT LISTINGS</div>
+                                    <div class="col-lg-8 purchase">CURRENT LISTINGS </div>
                                 </a>
                                 <div class="ibox">
                                     <div class="ibox-content">
+                                        <button id='shareBtn' class="pull-right btn btn-social btn-facebook" data-toggle='modal' data-target='#facebookShareModal'>
+                                            <span class="fa fa-facebook"></span> Share
+                                        </button>
 
                                         <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                                             <thead>
@@ -232,7 +266,7 @@ $account = accountOverview($_SESSION['username']);
                                                     <th data-hide="phone" data-sort-ignore="true">ISBN</th>
                                                     <th data-hide="phone" data-sort-ignore="true">Course</th>
                                                     <th>Price</th>
-                                                    <th data-hide="phone,tablet"class="text-right">Transaction Date</th>
+                                                    <th data-hide="phone,tablet" class="text-right">Transaction Date</th>
                                                     <th data-sort-ignore="true" class="text-right">Cancel</th>
                                                     <th data-hide="all">Author(s)</th>
                                                     <th data-hide="all">Book Condition</th>
@@ -351,12 +385,12 @@ $account = accountOverview($_SESSION['username']);
                         </div>
                     </div>
 
-                    
+
 
             </div>
             <?php include 'footer.php'; ?>
         </div>
-        
+
 
         <!-- Mainly scripts -->
         <script src="js/jquery-2.1.1.js"></script>
@@ -378,7 +412,7 @@ $account = accountOverview($_SESSION['username']);
                 $('.delete_listing').click(function (evt) {
                     listingID = $(this).data("id");
                 });
-                
+
                 var purchaseID; // used to store the transaction id for other functions on this page
                 $('.delete_purchase').click(function (evt) {
                     purchaseID = $(this).data("id");
@@ -399,7 +433,7 @@ $account = accountOverview($_SESSION['username']);
                     });
 
                 });
-                
+
                 $('#cancelPurchase').click(function (evt) {
 
                     $.ajax({
@@ -458,6 +492,51 @@ $account = accountOverview($_SESSION['username']);
                 });
 
                 $('.footable').footable();
+                
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        appId: '1163115277140426',
+                        xfbml: true,
+                        version: 'v2.8'
+                    });
+                    FB.AppEvents.logPageView();
+                };
+
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+                //                $.ajaxSetup({
+                //                    cache: true
+                //                });
+                //
+                //                $.getScript('//connect.facebook.net/en_US/sdk.js', function () {
+                //                    FB.init({
+                //                        appId: '1163115277140426',
+                //                        version: 'v2.8' // or v2.1, v2.2, v2.3, ...
+                //                    });
+                //                });
+
+                $('#shareBtn').click(function (evt) {
+                    FB.AppEvents.logEvent("Shared books");
+                    FB.ui({
+                        method: 'share',
+                        display: 'popup',
+                        href: 'https://swiftbookexchange.com',
+                    }, function (response) {});
+
+
+                });
+
+
+
 
 
             });

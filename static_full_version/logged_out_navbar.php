@@ -6,7 +6,7 @@ echo '<div class="row">
                                 <i class="fa fa-reorder"></i>
                             </button>
                             <span>
-                        <a href="home.php" class="navbar-brand">Duke 
+                        <a href="home.php" class="navbar-brand">Swift 
                         <span class="smaller">EXCHANGE</span></a>
                             </span>
                         </div>

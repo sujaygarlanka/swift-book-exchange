@@ -19,7 +19,7 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Duke Book Exchange</title>
+        <title>Swift Book Exchange</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -85,7 +85,8 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
                     </div>
                 </div>
             </div>
-        </div>      <div id="modal-form" class="modal fade" data-backdrop="static" aria-hidden="true">
+        </div>
+        <div id="modal-form" class="modal fade" data-backdrop="static" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -124,38 +125,38 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
         <div id="wrapper">
             <div id="page-wrapper">
                 <?php include 'logged_out_navbar.php'; ?>
-                <div class="foobar">
-                    <div>
-                        <span>Duke Book Exchange</span>
-                    </div>
-                    <div class='small-message'>
-                        <span>Sell and buy books. It's easy and free.</span>
-                    </div>
-                    <div class="vertical flip-container">
-                        <div class="flipper">
-                            <div class="front">
-                                <button class="btn btn-xs btn-outline btn-success getting-started">Let's get started</button>
-                            </div>
-                            <div class="back">
-                                <!--                                <div class="small-message" style="margin-bottom: -25px;">Search for a book- it's that easy.</div>-->
-                                <div class="search-form animated fadeInDown">
-                                    <form action="logged_out_search.php" method="post">
-                                        <div class="input-group" style="font-weight: normal">
-                                            <input type="text" name="search" class="form-control input-lg foc" autocomplete="off" placeholder="Search All, Class, Title, Author, or ISBN">
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-lg btn-primary" type="submit">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
+                    <div class="foobar">
+                        <div>
+                            <span>Swift Book Exchange</span>
+                        </div>
+                        <div class='small-message'>
+                            <span>Sell and buy books for Duke students by Duke Students. It's easy and free.</span>
+                        </div>
+                        <div class="vertical flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <button class="btn btn-xs btn-outline btn-success getting-started">Let's get started</button>
                                 </div>
-                                <button type="button" class="btn btn-outline btn-default" data-toggle="modal" data-target="#aboutUs">About Us</button>
+                                <div class="back">
+                                    <!--                                <div class="small-message" style="margin-bottom: -25px;">Search for a book- it's that easy.</div>-->
+                                    <div class="search-form animated fadeInDown">
+                                        <form action="logged_out_search.php" method="post">
+                                            <div class="input-group" style="font-weight: normal">
+                                                <input type="text" name="search" class="form-control input-lg foc" autocomplete="off" placeholder="Search All, Class, Title, Author, or ISBN">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-lg btn-primary" type="submit">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <button type="button" class="btn btn-outline btn-default" data-toggle="modal" data-target="#aboutUs">About Us</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--  <div class="foobar">
+                    <!--  <div class="foobar">
                     <div>
                         <span>Duke Book Exchange</span>
                     </div>
@@ -196,7 +197,7 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
 
                 </div> -->
 
-                <!-- <div class=col-md-4></div>             
+                    <!-- <div class=col-md-4></div>             
                     <div class="col-md-4 data">
                             <div class="ibox-content">
                                     <div class=individual>
@@ -218,7 +219,7 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
                             </div>
                         </div> -->
 
-                <!-- <div class="search-form animated fadeInDown">
+                    <!-- <div class="search-form animated fadeInDown">
                     <form action="index.html" method="get">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control input-lg foc">
@@ -230,7 +231,7 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
                         </div>
                     </form>
                 </div> -->
-                <!--  <div class="footer">
+                    <!--  <div class="footer">
                     <div class="about">
                         <strong>Copyright</strong> Duke Exchange &copy; 2016
                     </div>
@@ -279,6 +280,22 @@ if (isset($_POST['first_name'])){ // add users once they add their information i
 
             <script>
                 $(document).ready(function () {
+                    
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-91424838-1', 'auto');
+                    ga('send', 'pageview');
+
                     var width = $(window).width();
                     if ($(window).width() < 630) {
                         $('.foobar').css("font-size", "25px");

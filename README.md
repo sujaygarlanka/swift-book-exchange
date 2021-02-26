@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="600" height="350"/>
 
-Full video demo [here](./media/Swift%20Book%20Exchange%20Quick%20Demo.mov)
+Full demo video [here](./media/Swift%20Book%20Exchange%20Quick%20Demo.mov)
 
 A friend and I built a website for Duke students to buy and sell books. Previously, students were using a Facebook group to buy and sell books among students, which was cumbersome and inefficient. My friend and I decided to build a book exchange to make this transaction among students easier. A few features we included are:
 

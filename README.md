@@ -1,6 +1,6 @@
 # Swift Book Exchange
 
-<img src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="600" height="350"/>
+<img style="min-width:300px" src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="70%" />
 
 Full demo video [here](./media/Swift%20Book%20Exchange%20Quick%20Demo.mov)
 

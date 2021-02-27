@@ -1,6 +1,6 @@
 # Swift Book Exchange
 
-<img style="min-width:300px" src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="70%" />
+<img style="min-width:400px" src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="70%" />
 
 Full demo video [here](./media/Swift%20Book%20Exchange%20Quick%20Demo.mov)
 
@@ -12,3 +12,5 @@ A friend and I built a website for Duke students to buy and sell books. Previous
 - Facebook integration to allow users to share on Facebook the books that they are currently selling on the exchange
 - Duke login so only Duke students can login, preventing anyone from buying and selling books on the site
 - Detailed email notifications when a user buys or sells
+
+<img src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/languages.png" width="300px" />

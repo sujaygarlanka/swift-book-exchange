@@ -2,9 +2,9 @@
 
 <img style="min-width:400px" src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="70%" />
 
-Full demo video [here](./media/Swift%20Book%20Exchange%20Quick%20Demo.mov)
+Full demo video [here](https://youtu.be/qWIU2gYCGr8)
 
-A friend and I built a website for Duke students to buy and sell books. Previously, students were using a Facebook group to buy and sell books among students, which was cumbersome and inefficient. My friend and I decided to build a book exchange to make this transaction among students easier. Around **1300** students signed up, **450** students had either bought or sold a book and it had over **550** books posted on the website at its peak. A few features we included are:
+A friend and I built a website for Duke students to more easily buy and sell books among each other. Previously, students were using a Facebook group to buy and sell books among students, which was cumbersome and inefficient. Around **1300** students signed up, **450** students had either bought or sold a book and it had over **550** books posted on the website at its peak. A few features we included are:
 
 - Using Google Book API to get book information like ISBN, authors, cover picture, etc by simply typing in the title
 - Preloaded Duke classes so people can easily fill in the course information for a book

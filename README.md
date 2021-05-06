@@ -13,4 +13,4 @@ A friend and I built a website for Duke students to more easily buy and sell boo
 - Duke login so only Duke students can login, preventing anyone from buying and selling books on the site
 - Detailed email notifications when a user buys or sells
 
-<img src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/languages.png" width="300px" />
+**Technologies**: PHP, HTML/CSS/Javascript

@@ -1,6 +1,6 @@
 # Swift Book Exchange (Sept 2016 - Aug 2019)
 
-<img src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif" width="100%" />
+<img style="max-width: 700px" width="100%" src="https://raw.githubusercontent.com/sujaygarlanka/swift-book-exchange/master/media/Swift%20Book%20Exchange%20Preview.gif"/>
 
 Full demo video [here](https://youtu.be/qWIU2gYCGr8)
 
